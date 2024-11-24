@@ -16,10 +16,11 @@ async function getTicket(id){
         revalidate: 60
     }
   })
-  return res.json()
   if (!res.ok){
     notFound()
   }
+  return res.json()
+ 
 }
 
 export default async function TicketDetails({params}){
